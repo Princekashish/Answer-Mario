@@ -6,16 +6,16 @@ interface QuizProps {
     options: string[];
     correctAnswer: string;
     onNext: (isCorrect: boolean) => void;
-    coinCount: number; // Prop to pass the current coin count
-    setCoinCount: (newCount: number) => void; // Function to update the coin count
+    coinCount: number; 
+    setCoinCount: (newCount: number) => void;
 }
 
 const Quiz: React.FC<QuizProps> = ({ question, options, correctAnswer, onNext, coinCount, setCoinCount }) => {
-    const [selectedOption, setSelectedOption] = useState<string | null>(null); // Track the selected option
-    const [isAnswered, setIsAnswered] = useState(false); // Track if an answer has been selected
-    const [animationClass, setAnimationClass] = useState<string>(""); // Track animation class
-    const [isQuestionVisible, setIsQuestionVisible] = useState(false); // For controlling question visibility
-    const [isOptionsVisible, setIsOptionsVisible] = useState(false); // For controlling options visibility
+    const [selectedOption, setSelectedOption] = useState<string | null>(null); 
+    const [isAnswered, setIsAnswered] = useState(false); 
+    const [animationClass, setAnimationClass] = useState<string>(""); 
+    const [isQuestionVisible, setIsQuestionVisible] = useState(false); 
+    const [isOptionsVisible, setIsOptionsVisible] = useState(false); 
     const option = [
         { image: "./optionA.png" },
         { image: "./optionB.png" },
@@ -24,7 +24,7 @@ const Quiz: React.FC<QuizProps> = ({ question, options, correctAnswer, onNext, c
     ]
 
     useEffect(() => {
-        // Reset state when a new question is shown
+       
         setSelectedOption(null);
         setIsAnswered(false);
         setAnimationClass("");
@@ -128,13 +128,12 @@ const Quiz: React.FC<QuizProps> = ({ question, options, correctAnswer, onNext, c
                             className="w-full flex flex-col gap-3 p-4"
                         >
                             {options.map((option, index) => {
-                                // Determine the color for the option
                                 let optionClass = 'bg-white';
                                 if (isAnswered) {
                                     if (option === correctAnswer) {
                                         optionClass = 'bg-green-500';
                                     } else if (option === selectedOption) {
-                                        optionClass = 'bg-red-500'; // Incorrect answer
+                                        optionClass = 'bg-red-500'; 
                                     }
                                 }
 
@@ -143,10 +142,10 @@ const Quiz: React.FC<QuizProps> = ({ question, options, correctAnswer, onNext, c
                                         key={index}
                                         className={`w-full flex items-center gap-3 rounded-full p-2 pl-1 shadow hover:shadow-md transition-shadow border border-gray-200 ${optionClass} ${animationClass}`}
                                         onClick={() => handleOptionClick(option)}
-                                        disabled={isAnswered} // Disable button after answering
-                                        initial={{ opacity: 0 }} // Initial opacity of each option (invisible)
-                                        animate={{ opacity: 1 }} // Fade-in each option
-                                        transition={{ delay: index * 0.3 }} // Stagger the options by delay
+                                        disabled={isAnswered} 
+                                        initial={{ opacity: 0 }} 
+                                        animate={{ opacity: 1 }} 
+                                        transition={{ delay: index * 0.3 }} 
                                     >
                                         <div
                                             className={`w-8 h-8 rounded-full ${index === 0
@@ -158,7 +157,7 @@ const Quiz: React.FC<QuizProps> = ({ question, options, correctAnswer, onNext, c
                                                         : 'bg-pink-500'
                                                 } flex items-center justify-center text-white font-semibold`}
                                         >
-                                            {String.fromCharCode(65 + index)} {/* Display 'A', 'B', 'C', 'D' */}
+                                            {String.fromCharCode(65 + index)}
                                         </div>
                                         <span className="text-gray-800 font-medium">{option}</span>
                                     </motion.button>
