@@ -58,6 +58,8 @@ const Start1: React.FC = () => {
 
     // Restart the quiz
     const handleRestart = () => {
+        setShowQuiz(false);
+        setShowForm(false);
         setCoinCount(50);
         setCorrectAnswersCount(0);
         setCurrentQuestionIndex(0);
@@ -68,11 +70,11 @@ const Start1: React.FC = () => {
 
     // Go back to the home screen
     const handleHome = () => {
-        setShowForm(false);
-        setShowQuiz(false);
+        
+       
     };
 
-    console.log(userAnswers);
+
     
     return (
         <div className="overflow-hidden">
