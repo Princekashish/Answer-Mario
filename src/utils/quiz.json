@@ -1,0 +1,78 @@
+{
+    "success": true,
+    "data": {
+      "questions": [
+        {
+          "correctOptionsIndex": 0,
+          "options": [
+            "Brendan Eich",
+            "Tim Berners-Lee",
+            "Linus Torvalds",
+            "Guido van Rossum"
+          ],
+          "question": "Who created JavaScript in 1995?"
+        },
+        {
+          "correctOptionsIndex": 0,
+          "options": [
+            "Mocha",
+            "Latte",
+            "Espresso",
+            "Cappuccino"
+          ],
+          "question": "What was JavaScript originally named?"
+        },
+        {
+          "correctOptionsIndex": 0,
+          "options": [
+            "V8 Engine",
+            "SpiderMonkey Engine",
+            "ChakraCore Engine",
+            "Nitro Engine"
+          ],
+          "question": "Which engine uses a just-in-time compiler for JavaScript?"
+        },
+        {
+          "correctOptionsIndex": 0,
+          "options": [
+            "Non-blocking event loop ",
+            "Multi-threading model ",
+            "Blocking synchronous calls ",
+            "Parallel processing threads "
+          ],
+          "question": "How does JavaScript handle I/O operations efficiently despite being single-threaded?"
+        },
+        {
+          "correctOptionsIndex": 0,
+          "options": [
+            "Node.js runtime ",
+            "Apache server ",
+            "Tomcat server ",
+            "IIS server "
+          ],
+          "question": "In which environment can you run server-side JavaScript code? "
+        },
+        {
+          "correctOptionsIndex": 0,
+          "options": [
+            "Reassignable variable declaration ",
+            "Constant value assignment ",
+            "Function definition keyword ",
+            "Event listener attachment "
+          ],
+          "question": "What is the purpose of 'let' in JavaScript variables? "
+        },
+        {
+          "correctOptionsIndex": 0,
+          "options": [
+            "Async/await syntax",
+            "Synchronous loops",
+            "Blocking callbacks",
+            "Immediate functions"
+          ],
+          "question": "Which syntax supports asynchronous programming in JavaScript? "
+        }
+      ],
+      "topic": "JavaScript Overview"
+    }
+  }
